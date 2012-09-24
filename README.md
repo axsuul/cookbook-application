@@ -1,4 +1,4 @@
 cookbook-application
 ====================
 
-Handles the setup of application dependencies.
+This is a site cookbook that is intended to be overriden with custom functionality. Please redefine the default recipe.
