@@ -16,7 +16,8 @@ directories = [
   "shared/log",
   "shared/pids",
   "shared/system",
-  "shared/sockets"
+  "shared/sockets",
+  "shared/sitemaps"
 ]
 
 directories.each do |dir|
