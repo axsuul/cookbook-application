@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Set environment variable if not set so it can be overridden
+# so that this is possible: RAILS_ENV=test ./environment rails c for example
+setenv () {
+    name=$1
+    value=$2
+    eval current_value=\$$name
+
+    if [ -z "$current_value" ] ; then
+        export $name="$value"
+    fi
+}
+
+setenv "RAILS_ENV" "<%= @environment %>"
+
+# Execute whatever is passed in as argument
+"$@"
