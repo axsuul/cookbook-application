@@ -30,6 +30,7 @@ end
 # Create a bash environment script that is used to run application
 # related processes
 template "#{node['application']['deploy_path']}/environment" do
+  cookbook "application"
   source "rails_environment.erb"
   owner deploy_user.username
   variables :environment => node['application']['environment'] || node.chef_environment || node['chef_environment']  # addresses vagrant
