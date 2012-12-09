@@ -18,7 +18,7 @@ directories = [
   "shared/system",
   "shared/sockets",
   "shared/sitemaps"
-]
+] + node['application']['rails']['directories']
 
 directories.each do |dir|
   directory("#{node['application']['deploy_path']}/#{dir}") do
