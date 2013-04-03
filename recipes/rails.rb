@@ -34,6 +34,6 @@ template "#{node['application']['deploy_path']}/environment" do
   cookbook "application"
   source "rails_environment.erb"
   owner deploy_user.username
-  variables :environment => node['application']['environment'] || node.chef_environment || node['chef_environment']  # addresses vagrant
+  variables :environment => node['application']['environment'] || node.app_environment || node['app_environment']  # addresses vagrant
   mode 0700
 end
