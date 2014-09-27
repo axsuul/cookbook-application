@@ -1,3 +1,4 @@
+name             "application"
 maintainer       "James Hu"
 maintainer_email "axsuul@gmail.com"
 license          "All rights reserved"
